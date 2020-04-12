@@ -1,4 +1,4 @@
-# Authentication
+# Authentication and Policies
 
 This lab will cover username-based authentication and policies.
 
