@@ -10,8 +10,6 @@
 5. Set the `VAULT_TOKEN` env var to the `Root Token`.
    - Run `export VAULT_TOKEN=<root_token>`
      - Where `<root_token>` is the `Root Token.
-6. Login to Vault.
-   - Run `vault login token=$VAULT_TOKEN`
 
 ## Post-Lab Teardown
 
