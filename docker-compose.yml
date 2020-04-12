@@ -1,0 +1,20 @@
+version: "3"
+services:
+  vault:
+    # image: vault:1.4.0
+    build:
+      context: ./vault
+    networks:
+      main:
+    environment:
+      - VAULT_ADDR=http://127.0.0.1:8200
+    #   - API_SERVICE_HOST=api.service.local
+    #   - ENVIRONMENT=dev-docker
+    #   - EXAMPLE_FRONTEND_SERVICE_HOST=example-frontend.service.local
+    ports:
+      - 8200:8200
+networks:
+  main:
+volumes:
+  db:
+  # elasticsearch:

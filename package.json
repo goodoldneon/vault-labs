@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "start": "docker-compose -p vault up -d",
+    "stop": "docker-compose -p vault down"
+  }
+}
