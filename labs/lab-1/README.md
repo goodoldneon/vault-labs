@@ -154,7 +154,7 @@ Success! Data deleted (if it existed) at: secret/db
 Let's make sure the secret was actually deleted. Run:
 
 ```
-vault kv secret/db
+vault kv get secret/db
 ```
 
 And you should see the following output:
