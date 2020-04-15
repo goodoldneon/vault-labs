@@ -48,13 +48,13 @@ To enable the `userpass` auth type, run:
 vault auth enable userpass
 ```
 
-Let's create 2 policies: one that only allows reading of secrets and one that allows reading and writing. First, take a look at the policies, located in the files `/labs/lab-2/readonly.hcl` and `labs/lab-2/readwrite.hcl`. You'll notice both policies use the path `secret/*`, which means the policies will apply to all secrets. Since secrets support arbitrary paths, your policies can have fine-grained control over your secrets.
+Let's create 2 policies: one that only allows reading of secrets and one that allows reading and writing. First, take a look at the policies, located in the files `/labs/auth-and-policies/readonly.hcl` and `labs/auth-and-policies/readwrite.hcl`. You'll notice both policies use the path `secret/*`, which means the policies will apply to all secrets. Since secrets support arbitrary paths, your policies can have fine-grained control over your secrets.
 
 Now that we've seen the policies, let's add them to Vault. Run:
 
 ```
-vault policy write readonly /labs/lab-2/readonly.hcl && \
-vault policy write readwrite /labs/lab-2/readwrite.hcl
+vault policy write readonly /labs/auth-and-policies/readonly.hcl && \
+vault policy write readwrite /labs/auth-and-policies/readwrite.hcl
 ```
 
 Then create some users. Run:
