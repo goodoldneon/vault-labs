@@ -205,3 +205,9 @@ If you want to permanently delete a secret from Vault, run:
 ```
 vault kv metadata delete secret/db
 ```
+
+## Summary
+
+- Can create arbitrary key/value secrets at arbitrary paths.
+- Secrets are versioned.
+- Secret deletion probably doesn't have the behavior you'd expect.
