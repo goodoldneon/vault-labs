@@ -1,4 +1,4 @@
-# Vault Labs
+# Vault Workshop
 
 Labs for learning the basics of HashiCorp vault.
 
