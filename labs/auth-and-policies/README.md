@@ -60,15 +60,23 @@ vault policy write readwrite /labs/auth-and-policies/readwrite.hcl
 Then create some users. Run:
 
 ```
-vault write auth/userpass/users/user-nothing password=pass && \
-vault write auth/userpass/users/user-readonly password=pass policies=readonly && \
-vault write auth/userpass/users/user-readwrite password=pass policies=readwrite
+vault write auth/userpass/users/user-nothing \
+    password=pass && \
+vault write auth/userpass/users/user-readonly \
+    password=pass \
+    policies=readonly && \
+vault write auth/userpass/users/user-readwrite \
+    password=pass \
+    policies=readwrite
 ```
 
 Login as `user-nothing`. Run:
 
 ```
-vault login -method=userpass username=user-nothing password=pass
+vault login \
+    -method=userpass \
+    username=user-nothing \
+    password=pass
 ```
 
 This user has no explicit permissions, so creating a secret will give a 403 response. Run:
@@ -80,7 +88,10 @@ vault kv put secret/db username=me
 Next, login as `user-readwrite`. Run:
 
 ```
-vault login -method=userpass username=user-readwrite password=pass
+vault login \
+    -method=userpass \
+    username=user-readwrite \
+    password=pass
 ```
 
 This user has read/write permissions, so they'll be able to create a secret. Run:
@@ -92,7 +103,10 @@ vault kv put secret/db username=me
 Finally, login as `user-readonly`. Run:
 
 ```
-vault login -method=userpass username=user-readonly password=pass
+vault login \
+    -method=userpass \
+    username=user-readonly \
+    password=pass
 ```
 
 This user has readonly permissions, so creating a secret will give a 403 response. Run:

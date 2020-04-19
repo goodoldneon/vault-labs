@@ -67,7 +67,9 @@ username    me
 To read the secret from the REST API, run:
 
 ```
-curl -H "X-Vault-Token: $VAULT_TOKEN" -X GET $VAULT_ADDR/v1/secret/data/db | jq
+curl \
+  -H "X-Vault-Token: $VAULT_TOKEN" \
+  -X GET $VAULT_ADDR/v1/secret/data/db | jq
 ```
 
 And you should see the following output:

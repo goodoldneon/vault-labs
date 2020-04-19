@@ -69,7 +69,7 @@ You should see output like this:
 Key                Value
 ---                -----
 lease_id           mysql/creds/readonly/a5YOD4AaYJTAaGYhg9yVstmn
-lease_duration     768h
+lease_duration     1h
 lease_renewable    true
 password           bbd1984c-2810-0231-29a9-c2bdd7e865b0
 username           read-root-8450a4
